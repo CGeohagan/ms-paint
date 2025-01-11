@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0"
+  },
+  "scripts": {
+    "start": "parcel public/index.html"
+  },
+  "alias": {
+    "process": false,
+    "_comment": "added due to this error: https://github.com/parcel-bundler/parcel/issues/7697 "
+  }
+}

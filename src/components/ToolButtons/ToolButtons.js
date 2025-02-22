@@ -3,7 +3,7 @@ import { MdRectangle } from 'react-icons/md';
 import { MdCircle } from 'react-icons/md';
 import Line from '../Line';
 
-function ToolButtons({ currentTool, setCurrentTool }) {
+function ToolButtons({ currentTool, onToolUpdate }) {
   // ['draw', 'drawLine', 'drawCircle', 'drawRectangle', 'text']
 
   const toolButtons = [
@@ -24,7 +24,6 @@ function ToolButtons({ currentTool, setCurrentTool }) {
       Icon: MdCircle,
     },
   ];
-  console.log('hi colleen currentTool', currentTool);
 
   return (
     <div className='tool-buttons'>
@@ -38,7 +37,7 @@ function ToolButtons({ currentTool, setCurrentTool }) {
               value={tool}
               checked={tool === currentTool}
               onChange={(event) => {
-                setCurrentTool(event.target.value);
+                onToolUpdate(event.target.value);
               }}
             />
             <Icon />

@@ -1,10 +1,9 @@
 import ToolButtons from '../ToolButtons';
 
-function ToolPanel({ currentTool, setCurrentTool }) {
-  console.log('hi colleen inside tool panel', setCurrentTool);
+function ToolPanel({ currentTool, onToolUpdate }) {
   return (
     <div className='tool-panel'>
-      <ToolButtons currentTool={currentTool} setCurrentTool={setCurrentTool} />
+      <ToolButtons currentTool={currentTool} onToolUpdate={onToolUpdate} />
     </div>
   );
 }
